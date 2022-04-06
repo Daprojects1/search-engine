@@ -1,0 +1,68 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 0.625rem 0;
+    font-size: 20px;
+    gap: 40px;
+}
+
+.nav:autofill {
+    background-color: inherit;
+}
+
+.nav:-webkit-autofill {
+    background-color: inherit;
+}
+
+.headerText {
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    color: purple;
+    align-self: center;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.inputSpan {
+    background: rgb(243, 243, 243);
+    padding: 0 1.25rem;
+    border-radius: 30px;
+    border: 2px solid rgb(204, 203, 203);
+    display: flex;
+    width: 85vw;
+    max-width: 600px;
+}
+
+.inputSpan:hover {
+    box-shadow: 0 0 2px 1px rgba(204, 202, 202, 0.5);
+}
+
+.navInput {
+    width: 100%;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border-style: none;
+    background: inherit;
+}
+
+.navInput:-webkit-autofill,
+.navInput:-webkit-autofill:hover,
+.navInput:-webkit-autofill:focus,
+.navInput:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgb(243, 243, 243) inset !important;
+}
+
+.navInput:focus {
+    outline: none;
+}
+
+@media screen and (min-width:1000px) {
+    .icon {
+        display: inline-block;
+    }
+}

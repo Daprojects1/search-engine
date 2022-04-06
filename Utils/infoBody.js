@@ -21,5 +21,5 @@ const smallText = {
 }
 
 export default {
-    turnToHtml, isSecure, secureStyles, loadingOrUnavailable, smallText,
+    turnToHtml, isSecure, secureStyles, loadingOrUnavailable, smallText, h1Styles
 }

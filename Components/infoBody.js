@@ -12,7 +12,7 @@ const InfoBody = () => {
     const context = useContext(NavContext)
     let { searchResults, currentPage } = context
     let { searchBody, res, imgDisplay, newsCard } = styles
-    let { turnToHtml, isSecure, secureStyles, loadingOrUnavailable, smallText, failedCall } = bodyUtils
+    let { turnToHtml, isSecure, secureStyles, loadingOrUnavailable, smallText, h1Styles } = bodyUtils
 
     if (searchResults === false) return <div style={loadingOrUnavailable}>Sorry Your request was not processed, please refresh</div>
     if (searchResults === "") return <div style={loadingOrUnavailable}><Spinner animation="border" /></div>

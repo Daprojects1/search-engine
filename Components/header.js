@@ -9,7 +9,7 @@ const Header = () => {
     console.log(login)
     return (
         <div style={{ display: "flex", justifyContent: "right", width: "100%", fontSize: "1rem", alignSelf: "flex-start" }} className={header}>
-            {!user && <p className={link} onClick={login}>Login/Sign Up</p>}
+            {!user && <p className={link} >Login/Sign Up</p>}
             {user && <p>Sign Out</p>}
         </div >
     )

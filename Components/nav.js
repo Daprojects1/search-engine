@@ -10,7 +10,7 @@ const Nav = () => {
     let { navContainer, nav, headerText, icon, inputSpan, navInput } = styles
     return (
         <div className={navContainer}>
-            <div style={{ alignItems: "center", flexDirection: searching ? "row" : "column", padding: "0 10px" }} className={nav}>
+            <div style={{ alignItems: "center", flexDirection: searching ? "row" : "column", padding: "0 10px", height: !searching ? "50vh" : "" }} className={nav}>
                 <ul className={headerText}>
                     <li style={{ textAlign: "center", cursor: "pointer" }} onClick={sendToHome}><FontAwesomeIcon className={icon} icon={faAtom} bounce={!searching} /> Search Engine </li>
                 </ul>

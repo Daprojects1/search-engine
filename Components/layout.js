@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
     return (
 
         <div style={mainStyles}>
-            <Header />
+            <Header maxWidth={!searching ? "620px" : "100%"} />
             <Nav />
             {children}
         </div>

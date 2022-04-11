@@ -1,0 +1,15 @@
+.link {
+    border: 1px solid purple;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.link:hover {
+    background-color: rgb(75, 25, 75);
+    color: white;
+}
+
+.header {
+    color: rgb(121, 54, 121);
+    cursor: pointer;
+}

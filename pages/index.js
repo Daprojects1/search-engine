@@ -5,6 +5,7 @@ import options from '../Utils/apiOptions'
 import NavContext from "../Context/NavContext"
 import InfoNav from '../Components/infoNav'
 import InfoBody from '../Components/infoBody'
+import SignIn from './signin'
 
 
 export default function Home() {
@@ -75,10 +76,11 @@ export default function Home() {
     <div>
       <NavContext.Provider value={contextData}>
         <Layout >
-          {searching && <>
-            <InfoNav />
-            <InfoBody />
-          </>}
+          {searching &&
+            <>
+              <InfoNav />
+              <InfoBody />
+            </>}
         </Layout>
       </NavContext.Provider>
     </div>

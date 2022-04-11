@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import NavContext from "../Context/NavContext"
+import Header from "./header"
 import Nav from "./nav"
 
 
@@ -14,11 +15,13 @@ const Layout = ({ children }) => {
         flexDirection: "column",
         justifyContent: searching ? "unset" : "center",
         alignItems: searching ? "unset" : "center",
-        height: "60vh"
+        marginTop: "1.5rem "
     }
 
     return (
+
         <div style={mainStyles}>
+            <Header />
             <Nav />
             {children}
         </div>

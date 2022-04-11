@@ -10,6 +10,19 @@ a {
   text-decoration: none;
 }
 
+a:any-link {
+  font-size: 20px;
+  color: rgb(85, 30, 131);
+  text-decoration: none;
+}
+
+
+a:any-link:hover {
+  color: rgb(146, 87, 201);
+  text-decoration: underline;
+}
+
+
 li {
   list-style-type: none;
 }

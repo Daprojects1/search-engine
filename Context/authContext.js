@@ -21,7 +21,6 @@ export default function AuthContextProvider({ children }) {
         netlifyIdentity.on("login", user => {
             setUser(user)
             netlifyIdentity.close()
-            console.log(user)
         })
         netlifyIdentity.on("logout", () => setUser(null))
         // init netlify identity connection

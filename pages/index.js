@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import Layout from "../Components/layout"
 import options from '../Utils/apiOptions'
 import NavContext from "../Context/NavContext"
 import InfoNav from '../Components/infoNav'
 import InfoBody from '../Components/infoBody'
+import { AuthContext } from '../Context/authContext'
 import SignIn from './signin'
 
 
@@ -13,6 +14,9 @@ export default function Home() {
   const [searchValue, setSearchValue] = useState("")
   const [currentPage, setCurrentPage] = useState("WebSearchAPI")
   const [searchResults, setSearchResult] = useState("")
+  const { user, login } = useContext(AuthContext)
+  useEffect(() => {
+  }, [])
   const handleSearch = (e) => {
     setSearchValue(e.target.value)
   }
@@ -58,6 +62,14 @@ export default function Home() {
     setSearchValue("")
     setSearching(false)
   }
+  const protectingRoute = () => {
+    login()
+    return <div className='card'>
+      <div className='error'>
+        <p >You must be logged in to view this content.</p>
+      </div>
+    </div>
+  }
   const contextData = {
     searching,
     searchValue,
@@ -71,7 +83,6 @@ export default function Home() {
     currentPage,
     sendToHome,
   }
-
   return (
     <div>
       <NavContext.Provider value={contextData}>
@@ -79,7 +90,7 @@ export default function Home() {
           {searching &&
             <>
               <InfoNav />
-              <InfoBody />
+              {user ? <InfoBody /> : protectingRoute()}
             </>}
         </Layout>
       </NavContext.Provider>

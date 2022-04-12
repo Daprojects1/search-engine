@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
+import Router from "next/router"
 import axios from 'axios'
 import Layout from "../Components/layout"
 import options from '../Utils/apiOptions'
@@ -6,7 +7,7 @@ import NavContext from "../Context/NavContext"
 import InfoNav from '../Components/infoNav'
 import InfoBody from '../Components/infoBody'
 import { AuthContext } from '../Context/authContext'
-import SignIn from './signin'
+
 
 
 export default function Home() {
@@ -15,8 +16,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState("WebSearchAPI")
   const [searchResults, setSearchResult] = useState("")
   const { user, login } = useContext(AuthContext)
-  useEffect(() => {
-  }, [])
+
   const handleSearch = (e) => {
     setSearchValue(e.target.value)
   }
@@ -83,6 +83,7 @@ export default function Home() {
     currentPage,
     sendToHome,
   }
+
   return (
     <div>
       <NavContext.Provider value={contextData}>

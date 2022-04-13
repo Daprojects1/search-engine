@@ -9,32 +9,38 @@ import InfoBody from '../Components/infoBody'
 import { AuthContext } from '../Context/authContext'
 
 
-
-export default function Home() {
+export async function getServerSideProps() {
+  return {
+    props: {
+      APIKEY: process.env.REACT_APP_API_KEY
+    }
+  }
+}
+export default function Home(props) {
   const [searching, setSearching] = useState(false)
   const [searchValue, setSearchValue] = useState("")
   const [currentPage, setCurrentPage] = useState("WebSearchAPI")
   const [searchResults, setSearchResult] = useState("")
   const { user, login } = useContext(AuthContext)
-
+  const { APIKEY } = props
   const handleSearch = (e) => {
     setSearchValue(e.target.value)
   }
   const handleClickSearch = (searchValue) => {
     if (searchValue.trim().length > 0)
-      grabData(searchValue, currentPage)
+      grabData(searchValue, currentPage, APIKEY)
   }
 
   const handlePressSearch = (e, searchValue) => {
     if (e.keyCode === 13 && searchValue.trim().length > 0) {
-      grabData(searchValue, currentPage)
+      grabData(searchValue, currentPage, APIKEY)
     }
   }
 
-  const grabData = (value, page) => {
+  const grabData = (value, page, APIKEY) => {
     setSearching(true)
     setSearchResult("")
-    axios.request(options(page, value)).then((response) => changePageResults(response.data.value))
+    axios.request(options(page, value, APIKEY)).then((response) => changePageResults(response.data.value))
       .catch((error) => {
         console.error(error);
         setSearchResult(false)
@@ -45,7 +51,7 @@ export default function Home() {
   }
   const navClick = (stringApi) => {
     setCurrentPage(stringApi)
-    grabData(searchValue, stringApi)
+    grabData(searchValue, stringApi, APIKEY)
   }
 
   const checkIfActive = (string, obj) => {

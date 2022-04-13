@@ -28,16 +28,16 @@ export default function Home(props) {
   }
   const handleClickSearch = (searchValue) => {
     if (searchValue.trim().length > 0)
-      grabData(searchValue, currentPage, APIKEY)
+      grabData(searchValue, currentPage)
   }
 
   const handlePressSearch = (e, searchValue) => {
     if (e.keyCode === 13 && searchValue.trim().length > 0) {
-      grabData(searchValue, currentPage, APIKEY)
+      grabData(searchValue, currentPage)
     }
   }
 
-  const grabData = (value, page, APIKEY) => {
+  const grabData = (value, page) => {
     setSearching(true)
     setSearchResult("")
     axios.request(options(page, value, APIKEY)).then((response) => changePageResults(response.data.value))
@@ -51,7 +51,7 @@ export default function Home(props) {
   }
   const navClick = (stringApi) => {
     setCurrentPage(stringApi)
-    grabData(searchValue, stringApi, APIKEY)
+    grabData(searchValue, stringApi)
   }
 
   const checkIfActive = (string, obj) => {

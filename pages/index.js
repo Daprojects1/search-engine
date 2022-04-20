@@ -9,7 +9,7 @@ import InfoBody from '../Components/infoBody'
 import { AuthContext } from '../Context/authContext'
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   return {
     props: {
       APIKEY: process.env.REACT_APP_API_KEY

@@ -6,8 +6,6 @@ import bodyUtils from "../Utils/infoBody"
 import styles from "../styles/infoBody.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-
 const InfoBody = () => {
     const context = useContext(NavContext)
     let { searchResults, currentPage } = context

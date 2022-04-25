@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from 'react'
-import Router from "next/router"
 import axios from 'axios'
 import Layout from "../Components/layout"
 import options from '../Utils/apiOptions'

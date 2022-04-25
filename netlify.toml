@@ -1,2 +1,4 @@
 [build]
  functions="netUtils"
+ [build.environment]
+  NODE_VERSION = "v16.14.2"

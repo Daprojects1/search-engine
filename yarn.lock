@@ -84,9 +84,9 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-win32-x64-msvc@12.1.4":
-  "integrity" "sha512-JtYuWzKXKLDMgE/xTcFtCm1MiCIRaAc5XYZfYX3n/ZWSI1SJS/GMm+Su0SAHJgRFavJh6U/p998YwO/iGTIgqQ=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.4.tgz"
+"@next/swc-darwin-x64@12.1.4":
+  "integrity" "sha512-p1lwdX0TVjaoDXQVuAkjtxVBbCL/urgxiMCBwuPDO7TikpXtSRivi+mIzBj5q7ypgICFmIAOW3TyupXeoPRAnA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-12.1.4.tgz"
   "version" "12.1.4"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -1519,8 +1519,6 @@
   "resolved" "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz"
   "version" "4.0.0"
 
-"resolve@^1.13.1", "resolve@^1.17.0", "resolve@^1.20.0":
-
 "resolve@^2.0.0-next.3":
   "integrity" "sha512-W8LucSynKUIDu9ylraa7ueVZ7hc0uAgJBxVsQSKOXOyle8a93qXhcz+XAXZ8bIq2d6i4Ehddn6Evt+0/UwKk6Q=="
   "resolved" "https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.3.tgz"
@@ -1555,12 +1553,10 @@
   dependencies:
     "loose-envify" "^1.1.0"
 
-"semver@^6.3.0":
+"semver@^6.3.0", "semver@^7.3.5":
   "integrity" "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
   "version" "6.3.0"
-
-"semver@^7.3.5":
 
 "shebang-command@^2.0.0":
   "integrity" "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA=="

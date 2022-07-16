@@ -21,16 +21,16 @@ const InfoBody = () => {
             {currentPage === "WebSearchAPI" ?
                 <div>
                     {searchResults.map(result => (
-                        <div className={res} key={result.id}>
-                            <small style={smallText}>{result.url}</small>
-                            <span style={secureStyles(result.isSafe)}>{` {${isSecure(result.isSafe)}}`}</span>
-                            <a href={result.url} style={{ textDecoration: "none" }}> <h1 style={{ color: "#563182" }}>{result.title}</h1></a>
+                        <div className={res} key={result?.id}>
+                            <small style={smallText}>{result?.url}</small>
+                            <span style={secureStyles(result?.isSafe)}>{` {${isSecure(result?.isSafe)}}`}</span>
+                            <a href={result.url} style={{ textDecoration: "none" }}> <h1 style={{ color: "#563182" }}>{result?.title}</h1></a>
                             <p>{turnToHtml(result.snippet)}</p>
                         </div>))}
                 </div>
                 : currentPage === "ImageSearchAPI" ? <div className={imgDisplay}>
                     {searchResults.map(result => (
-                        <a href={result.url}><img src={result.thumbnail} width={250} height={250} /></a>
+                        <a href={result?.url}><img src={result?.thumbnail} width={250} height={250} /></a>
                     ))}
                 </div> : currentPage === "NewsSearchAPI" ?
                     <div >
@@ -38,10 +38,10 @@ const InfoBody = () => {
                             <div className={newsCard}>
                                 <a href={result.url} style={{ textDecoration: "none" }} >
                                     <div >
-                                        <small style={smallText}>{result.provider.name}</small>
-                                        <span style={secureStyles(result.isSafe)}>{` {${isSecure(result.isSafe)}}`}</span>
-                                        <a href={result.url} style={{ textDecoration: "none" }}><h1 style={h1Styles}>{result.title}</h1></a>
-                                        <p style={{ color: "black" }}>{turnToHtml(result.snippet)}</p>
+                                        <small style={smallText}>{result?.provider?.name}</small>
+                                        <span style={secureStyles(result?.isSafe)}>{` {${isSecure(result?.isSafe)}}`}</span>
+                                        <a href={result?.url} style={{ textDecoration: "none" }}><h1 style={h1Styles}>{result?.title}</h1></a>
+                                        <p style={{ color: "black" }}>{turnToHtml(result?.snippet)}</p>
                                     </div></a>
                             </div>
                         ))}

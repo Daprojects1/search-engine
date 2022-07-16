@@ -1,6 +1,4 @@
-const APIKEY = process.env.REACT_APP_API_KEY || '6837a1f539msh1b705e970023170p151f68jsn293d56b07c2c'
-
-const options = (ApiString, value) => {
+const options = (ApiString, value, APIKEY) => {
     if (ApiString === "WebSearchAPI") {
         return {
             method: 'GET',
